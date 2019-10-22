@@ -1,4 +1,4 @@
-# inspinia-vue prject
+# inspinia-vue
 This project uses bootstrap and inspinia template with vue (+ vue-router and vuex) to make a standard single page application (SPA). Use this project as base for your new projects with vue.
 
 ## Project setup
