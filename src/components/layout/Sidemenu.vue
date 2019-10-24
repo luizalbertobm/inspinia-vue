@@ -17,9 +17,15 @@
                         IN+
                     </div>
                 </li>
-                <router-link tag="li" to="/" active-class="active" exact>
-                    <a><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
-                </router-link>
+                <li active-class="active">
+                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                        <router-link tag="li" to="/" active-class="active">
+                            <a>Dashboard</a>
+                        </router-link>
+                        <li><a href="dashboard_2.html">Dashboard v.2</a></li>
+                    </ul>
+                </li>
                 <router-link tag="li" to="/projects" active-class="active">
                     <a><i class="fa fa-folder"></i> <span class="nav-label">Projects</span></a>
                 </router-link>
@@ -35,7 +41,9 @@
                 <router-link tag="li" to="/requests" active-class="active">
                     <a><i class="fa fa-th-large"></i> <span class="nav-label">Requests</span></a>
                 </router-link>
-                
+                <router-link tag="li" to="/test" active-class="active">
+                    <a><i class="fa fa-th-large"></i> <span class="nav-label">Test</span></a>
+                </router-link>
             </ul>
 
         </div>

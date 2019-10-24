@@ -1,16 +1,20 @@
 <template>
-  <div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1>Tasks</h1>
-      </div>
-    </div>
+  <div>
+    <PageHeader title="Tasks" :breadcumbs="breadcumbs" />
+    <div class="wrapper wrapper-content animated fadeInRight"></div>
   </div>
 </template>
 
 <script>
-export default {};
+import PageHeader from "../PageHeader";
+export default {
+  components: { PageHeader },
+  data() {
+    return {
+      breadcumbs: [
+        { name: "Home", link: "/" }, { name: "Tasks" }
+      ]
+    };
+  }
+};
 </script>
-
-<style>
-</style>
