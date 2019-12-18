@@ -26,7 +26,7 @@
           <div class="ibox-content">
             <h5>Horas trabalhadas</h5>
             <h2>8h</h2>
-            <ProgressBar percentage="70" mini="true" striped="true" animated="true" />
+            <ProgressBar percentage="90" :mini="false" :striped="false" :animated="false" />
             <div class="m-t-sm small">Server down since 4:32 pm.</div>
           </div>
         </div>

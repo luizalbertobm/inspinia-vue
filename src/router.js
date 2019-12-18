@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import DashboadPage from './components/pages/DashboardPage'
 import ProjectsPage from './components/pages/ProjectsPage'
+import ProjectPage from './components/pages/ProjectPage'
 import TasksPage from './components/pages/TasksPage'
 import CustomersPage from './components/pages/CustomersPage'
 import ReleasesPage from './components/pages/ReleasesPage'
@@ -15,6 +16,7 @@ export default new VueRouter({
     routes: [
         { path: '/', component: DashboadPage },
         { path: '/projects', component: ProjectsPage },
+        { path: '/project/:id', component: ProjectPage, props:true },
         { path: '/tasks', component: TasksPage },
         { path: '/customers', component: CustomersPage },
         { path: '/releases', component: ReleasesPage },
