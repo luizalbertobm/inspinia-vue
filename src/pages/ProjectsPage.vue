@@ -22,6 +22,7 @@
                                         type="button"
                                         id="loading-example-btn"
                                         class="btn btn-white btn-sm"
+                                        @click="getAllProjects"
                                     >
                                         <i class="fa fa-refresh"></i> Refresh
                                     </button>
@@ -43,7 +44,7 @@
                             <table class="table table-hover" v-if="projects">
                                 <tbody>
                                     <tr v-for="(project, id) in projects" :key="id">
-                                        <td style="width:60px" class="d-none d-md-block">
+                                        <td style="width:60px" class>
                                             <img
                                                 alt="image"
                                                 class="rounded img-fluid"
@@ -53,7 +54,7 @@
                                         <td class="project-title">
                                             <a :href="'/project/'">{{project.name}}</a>
                                             <br />
-                                            <small>Closure: {{project.deadLine}}</small>
+                                            <small>Deadline: {{project.deadLine}}</small>
                                         </td>
                                         <td class="project-completion">
                                             <small>Percentage completed: {{project.completedPercent}}%</small>
@@ -64,7 +65,7 @@
                                                 ></div>
                                             </div>
                                         </td>
-                                        <td class="text-right d-none d-md-block">
+                                        <td class="text-right">
                                             <a
                                                 v-for="(user, index) in project.users"
                                                 :key="index"
@@ -110,6 +111,7 @@ export default {
     },
     methods: {
         getAllProjects() {
+            this.projects = null
             this.$http.get('projects.json').then(res => {
                 this.projects = res.data
             })
